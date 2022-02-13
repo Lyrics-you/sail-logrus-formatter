@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Lyrics-you/sail-logrus-formatter/sail/hooks"
+	"github.com/Lyrics-you/sail-logrus-formatter/hooks"
 
 	"github.com/sirupsen/logrus"
 )

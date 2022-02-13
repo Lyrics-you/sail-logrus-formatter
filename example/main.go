@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	nested "github.com/Lyrics-you/sail-logrus-formatter"
+	nested "github.com/Lyrics-you/sail-logrus-formatter/Sailor"
 
 	"github.com/sirupsen/logrus"
 )

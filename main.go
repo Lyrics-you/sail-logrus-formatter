@@ -1,8 +1,7 @@
 package main
 
 import (
-	nested "github.com/Lyrics-you/sail-logrus-formatter/"
-
+	nested "github.com/Lyrics-you/sail-logrus-formatter/sailor"
 	"github.com/sirupsen/logrus"
 )
 
