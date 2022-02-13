@@ -5,9 +5,10 @@ import (
 	"bytes"
 	"fmt"
 	"runtime"
-	"sail/hooks"
 	"sort"
 	"strings"
+
+	"github.com/Lyrics-you/sail-logrus-formatter/sail/hooks"
 
 	"github.com/sirupsen/logrus"
 )

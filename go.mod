@@ -1,4 +1,4 @@
-module sail
+module github.com/Lyrics-you/sail-logrus-formatter
 
 go 1.17
 
