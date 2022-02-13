@@ -1,7 +1,7 @@
 # **sail**-logrus-formatter
 Logurs' Formatter Project : Provides "yyyy-MM-dd" date formatting, log level colors, and positioning.
 
-![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220213164446604.png)
+![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220213170137007.png)
 
 ## 介绍
 

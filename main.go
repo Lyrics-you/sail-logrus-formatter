@@ -15,7 +15,6 @@ func main() {
 		Colors:          true,
 		FieldsColors:    true,
 		FieldsSpace:     true,
-		LowerCaseLevel:  true,
 	})
 
 	logrus.WithFields(logrus.Fields{
