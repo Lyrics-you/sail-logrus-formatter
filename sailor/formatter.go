@@ -153,7 +153,7 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 
 	// write level
 	var level string
-	if !f.LowerCaseLevel {
+	if f.LowerCaseLevel {
 		level = entry.Level.String()
 	} else {
 		level = strings.ToUpper(entry.Level.String())
