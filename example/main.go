@@ -20,7 +20,7 @@ func main() {
 		FieldsSpace:     false,
 	}
 
-	printDemo(f, "nested-logrus-formatter")
+	printDemo(f, "sail-logrus-formatter")
 
 	fmt.Print("\n--- default logrus formatter ---\n\n")
 	printDemo(nil, "default logrus formatter")
