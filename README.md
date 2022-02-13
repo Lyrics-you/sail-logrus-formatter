@@ -62,18 +62,24 @@ Formatter struct
 ## 
 
 ```go
+package main
+
 import (
-	nested "github.com/antonfisher/nested-logrus-formatter"
+	nested "github.com/Lyrics-you/sail-logrus-formatter/sailor"
 	"github.com/sirupsen/logrus"
 )
 
-log := logrus.New()
-log.SetFormatter(&nested.Formatter{
-	HideKeys:    true,
-	FieldsOrder: []string{"component", "category"},
-})
+func main() {
+	log := logrus.New()
+	log.SetFormatter(&nested.Formatter{
+		HideKeys:    true,
+		Colors:      true,
+		Position:    true,
+		FieldsOrder: []string{"component", "category"},
+	})
 
-log.Info("just info message")
-log.WithField("component", "rest").Warn("warn message")
+	log.Info("just info message")
+	log.WithField("component", "rest").Warn("warn message")
+}
 ```
 
