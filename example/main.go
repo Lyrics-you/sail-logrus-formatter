@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	fmt.Print("\n--- nested-logrus-formatter ---\n\n")
+	fmt.Print("\n--- sail-logrus-formatter ---\n\n")
 	f := &nested.Formatter{
 		HideKeys:        true,
 		CharStampFormat: "yyyy-MM-dd HH:mm:ss.SSS zzz",
