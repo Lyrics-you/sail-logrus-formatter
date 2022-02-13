@@ -1,7 +1,7 @@
 # **sail**-logrus-formatter
 Logurs' Formatter Project : Provides "yyyy-MM-dd" date formatting, log level colors, and positioning.
 
-![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220213145846973.png)
+![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220213164446604.png)
 
 ## 介绍
 
@@ -59,8 +59,6 @@ Formatter struct
 
 ## 使用
 
-## 
-
 ```go
 package main
 
@@ -72,10 +70,13 @@ import (
 func main() {
 	log := logrus.New()
 	log.SetFormatter(&nested.Formatter{
-		HideKeys:    true,
-		Colors:      true,
-		Position:    true,
-		FieldsOrder: []string{"component", "category"},
+		HideKeys:        true,
+		CharStampFormat: "yyyy-MM-dd HH:mm:ss.SSS zzz",
+		Position:        true,
+		Colors:          true,
+		FieldsColors:    true,
+		FieldsSpace:     true,
+		FieldsOrder:     []string{"component", "category"},
 	})
 
 	log.Info("just info message")
