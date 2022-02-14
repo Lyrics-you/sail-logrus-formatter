@@ -1,4 +1,4 @@
-package formatter
+package sailor
 
 // Modify : https://github.com/antonfisher/nested-logrus-formatter
 import (
@@ -144,10 +144,10 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 	b.WriteString("]")
 
 	// write position
-	if f.FieldsSpace {
-		b.WriteString(" ")
-	}
 	if f.Position {
+		if f.FieldsSpace {
+			b.WriteString(" ")
+		}
 		b.WriteString(fmt.Sprintf("[%s]", hooks.FindCaller(5)))
 	}
 
@@ -165,6 +165,9 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 
 	if f.CallerFirst {
 		f.writeCaller(b, entry)
+		if f.FieldsSpace {
+			b.WriteString(" ")
+		}
 	}
 
 	if f.Colors {
@@ -205,7 +208,7 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 		b.WriteString(entry.Message)
 	}
 
-	if f.CallerFirst {
+	if !f.CallerFirst {
 		f.writeCaller(b, entry)
 	}
 
@@ -216,11 +219,11 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 func (f *Formatter) writeCaller(b *bytes.Buffer, entry *logrus.Entry) {
 	if entry.HasCaller() {
 		if f.CustomCallerFormatter != nil {
-			fmt.Fprintln(b, f.CustomCallerFormatter(entry.Caller))
+			fmt.Fprint(b, f.CustomCallerFormatter(entry.Caller))
 		} else {
 			fmt.Fprintf(
 				b,
-				" (%s:%d %s)",
+				"(%s:%d %s)",
 				entry.Caller.File,
 				entry.Caller.Line,
 				entry.Caller.Function,

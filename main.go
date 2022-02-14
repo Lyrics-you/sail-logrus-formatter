@@ -14,9 +14,9 @@ func main() {
 		Position:        true,
 		Colors:          true,
 		FieldsColors:    true,
-		FieldsSpace:     true,
+		FieldsSpace:     false,
 	})
-
+	logrus.SetReportCaller(false)
 	logrus.WithFields(logrus.Fields{
 		"name": "sailor",
 	}).Info("info msg")
@@ -32,4 +32,17 @@ func main() {
 	logrus.WithFields(logrus.Fields{
 		"name": "sailor",
 	}).Warn("error msg")
+
+	l := logrus.New()
+	// l.SetOutput(output)
+	l.SetLevel(logrus.DebugLevel)
+	l.SetFormatter(&nested.Formatter{
+		TimeStampFormat: "-",
+		CallerFirst:     true,
+		FieldsSpace:     false,
+	})
+	l.SetReportCaller(true)
+
+	l.Debug("test1")
+	l.Debug("test2")
 }
