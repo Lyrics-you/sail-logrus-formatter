@@ -9,7 +9,6 @@ import (
 	"strings"
 
 	"github.com/Lyrics-you/sail-logrus-formatter/hooks"
-
 	"github.com/sirupsen/logrus"
 )
 
@@ -126,7 +125,6 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 	if f.TimeStampFormat == "" {
 		if f.CharStampFormat != "" {
 			f.TimeStampFormat = f.transformToStamp(f.CharStampFormat)
-			fmt.Println()
 		} else {
 			// f.TimeStampFormat = time.StampMilli
 			f.TimeStampFormat = StampNormal
