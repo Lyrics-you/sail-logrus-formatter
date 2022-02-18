@@ -7,7 +7,6 @@ import (
 	"strings"
 
 	nested "github.com/Lyrics-you/sail-logrus-formatter/sailor"
-	_ "github.com/antonfisher/nested-logrus-formatter"
 	"github.com/sirupsen/logrus"
 )
 
