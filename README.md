@@ -1,7 +1,9 @@
 # **sail**-logrus-formatter
 Logurs' Formatter Project : Provides "yyyy-MM-dd" date formatting, log level colors, and positioning.
 
-![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220213170137007.png)
+![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220218165643486.png)
+
+![shadow-zoom](https://image-taragrade.oss-cn-hangzhou.aliyuncs.com/imagehub/image-20220218165741952.png)
 
 ## 介绍
 
@@ -9,7 +11,7 @@ Logurs' Formatter Project : Provides "yyyy-MM-dd" date formatting, log level col
 
 区别：
 
-1. 增加了文件定位功能，提供[file:line]格式。总体格式更符合SailAnchor
+1. 增加了文件定位功能，提供[file:line @name]格式。总体格式更符合SailAnchor
 2. 日期格式化支持"yyyy-MM-dd HH:mm:ss.SSS zzz"格式，(yyyy:year,MM:month,dd:day,:HH:hour,mm:minute,ss:second,SSS:microsecond,zzz:time zone)
 3. 颜色等级选择共：Black\Red\Green\Yellow\Blue\Magenta\Cyan\Gray等
 4. 属性更符合认知：NoColor->Color等。
@@ -26,7 +28,7 @@ Formatter struct
 | TimeStampFormat       | string                      | "2006-01-02 15:04:05.000 MST"                 |
 | CharStampFormat       | string                      | "yyyy-MM-dd hh:mm:ss.SSS zzz"                 |
 | HideKeys              | bool                        | 显示[fieldValue]而不是[fieldKey:fieldValue]。 |
-| Position              | bool                        | 显示[文件:行数]                               |
+| Position              | bool                        | 显示[文件:行数 函数名()]                               |
 | Colors                | bool                        | 显示颜色                                      |
 | FieldsColors          | bool                        | 显示字段颜色                                  |
 | FieldsSpace           | bool                        | 字段中间是否添加空格                          |

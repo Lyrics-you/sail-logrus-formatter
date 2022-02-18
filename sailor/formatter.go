@@ -26,7 +26,7 @@ type Formatter struct {
 	// HideKeys - show [fieldValue] instead of [fieldKey:fieldValue]
 	HideKeys bool
 
-	// Position - Enable position [file:line]
+	// Position - Enable position [file:line @name()]
 	Position bool
 
 	// Colors - Enable colors
