@@ -48,10 +48,10 @@ func ExampleFormatter_Format_position() {
 	l.Error("test4")
 
 	// Output:
-	//[-][test/formatter_test.go:45][DEBU]test1
-	//[-][test/formatter_test.go:46][INFO]test2
-	//[-][test/formatter_test.go:47][WARN]test3
-	//[-][test/formatter_test.go:48][ERRO]test4
+	// [-][test/formatter_test.go:45 @ExampleFormatter_Format_position()][DEBU]test1
+	// [-][test/formatter_test.go:46 @ExampleFormatter_Format_position()][INFO]test2
+	// [-][test/formatter_test.go:47 @ExampleFormatter_Format_position()][WARN]test3
+	// [-][test/formatter_test.go:48 @ExampleFormatter_Format_position()][ERRO]test4
 }
 
 func ExampleFormatter_Format_full_level() {
